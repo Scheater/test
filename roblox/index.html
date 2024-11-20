@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheatSquad.gg</title>
+    <link id="favicon" rel="icon" href="https://i.imgur.com/6yMobW9.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="https://i.imgur.com/amfiNfF.png" alt="CheatSquad Logo" class="header-logo">
+            <div class="header-controls">
+                <label for="tagFilter">Filter by tag:</label>
+                <select id="tagFilter" onchange="filterClients()">
+                    <option value="all">All</option>
+                </select>
+                <button id="toggleOutdated" onclick="toggleOutdatedClients()">Hide Outdated</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner-Bereich -->
+    <section class="banner"></section>
+
+    <!-- Spiele-Buttons -->
+    <section class="games-container">
+        <div class="game-button">
+            <a href="/minecraft">
+                <img src="https://i.imgur.com/U21gnzr.jpeg" alt="Minecraft">
+                <span>Minecraft</span>
+            </a>
+        </div>
+        <div class="game-button">
+            <a href="/cs2">
+                <img src="https://i.imgur.com/uDNYCSH.jpeg" alt="CS2">
+                <span>CS2</span>
+            </a>
+        </div>
+        <div class="game-button">
+            <a href="/roblox">
+                <img src="https://i.imgur.com/Pl1uCrD.jpeg" alt="Roblox">
+                <span>Roblox</span>
+            </a>
+        </div>
+        <div class="game-button">
+            <a href="/gta-v">
+                <img src="https://i.imgur.com/SYz27Mg.jpeg" alt="GTA V">
+                <span>GTA V</span>
+            </a>
+        </div>
+        <div class="game-button">
+            <a href="/krunker-io">
+                <img src="https://i.imgur.com/F90gfC3.jpeg" alt="Krunker.IO">
+                <span>Krunker.IO</span>
+            </a>
+        </div>
+		<div class="game-button">
+            <a href="/valorant">
+                <img src="https://i.imgur.com/WV3qDpw.jpeg" alt="Valorant">
+                <span>Valorant</span>
+            </a>
+        </div>
+		<div class="game-button">
+            <a href="/fortnite">
+                <img src="https://i.imgur.com/Ekl3tcX.jpeg" alt="Fortnite">
+                <span>Fortnite</span>
+            </a>
+        </div>
+		<div class="game-button">
+            <a href="/among-us">
+                <img src="https://i.imgur.com/GdfZUmZ.jpeg" alt="Among Us">
+                <span>Among Us</span>
+            </a>
+        </div>
+		<div class="game-button">
+            <a href="/gmod">
+                <img src="https://i.imgur.com/ZI7k5rL.jpeg" alt="Garry's Mod">
+                <span>Garry's Mod</span>
+            </a>
+        </div>
+		<div class="game-button">
+            <a href="/apex-legends">
+                <img src="https://i.imgur.com/IaAUWUK.jpeg" alt="Apex Legends">
+                <span>Apex Legends</span>
+            </a>
+        </div>
+		<div class="game-button">
+            <a href="/team-fortress-2">
+                <img src="https://i.imgur.com/KCCyeI9.jpeg" alt="Team Fortress 2">
+                <span>Team Fortress 2</span>
+            </a>
+        </div>
+		<div class="game-button">
+            <a href="/more-cheats">
+                <img src="https://i.imgur.com/KCCyeI9.jpeg" alt="More Cheats">
+                <span>More Cheats</span>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        function filterClients(game) {
+            const clients = document.querySelectorAll('.client');
+            clients.forEach(client => {
+                if (game === 'all' || client.dataset.game === game) {
+                    client.style.display = 'block';
+                } else {
+                    client.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleOutdatedClients() {
+            // Funktion zum Ausblenden veralteter Clients
+        }
+    </script>
+</body>
+</html>
